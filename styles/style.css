@@ -52,10 +52,14 @@ body {
 .presentacion {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; /* Ajusta la altura */
+    background-image: url("./assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5% 15%;
 }
 /* Capa semi-transparente sobre la imagen */
 .presentacion::before {
@@ -83,13 +87,20 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .presentacion__contenido{
-    flex: 1;
-    padding-right: 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px; /* Ajusta el ancho máximo */
+    background: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
+    padding: 20px;
+    border-radius: 10px;
 }
 .presentacion__imagen{
-    width: 250px; /* Ajusta el tamaño */
-    border-radius: 10px;
-    object-fit: cover;
+    width: 200px; /* Tamaño ajustado */
+    height: auto;
+    border-radius: 10px
 
 }
 
